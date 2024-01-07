@@ -1,103 +1,28 @@
-#include<stdlib.h>
-#include<stdio.h>
-#include<time.h>
-
+#include <stdio.h>
+#include <stdlib.h>
+#define SIZE 50
 int main()
 {
-printf("Welcome to the Rock,Paper and Scissors game ....\n");
-srand(time(NULL));
-int i=10,human;
-int HumanScore,ComputersScore,Draw;
-while(i<10)
-{
-printf("Please select an option 1.Rock 2.Paper 3.Scissors...\n");
-scanf("%d",&human);
-int computer=(rand()%3)+1;
+ int sayac = 0 , kelime = 0 ;
+ char A[SIZE];
+     printf("cumle icinde kac tane a harfini olacagini soyleyen bir program yaptim\n");
+     printf("lutfen 50 karekterli bir cumle yazin\n");
+     gets(A);
 
-
-if(human==1)
-{
-if(computer==3)
-    {
-    printf("You win...\n");
-    HumanScore++;
-    }
-
-    else if(computer==2)
-    {
-    printf("Computer wins...\n");
-    ComputersScore++;
-    }
-
-else if(computer==1)
-    {
-    printf("Draw...\n");
-    Draw++;
-    }
-}
-
-else if(human==2)
-{
-   if(computer==3)
-   {
-    printf("Compter wins...\n");
-   ComputersScore++;
-   }
-
-    else if(computer==2)
-   {
-  printf("Draw...\n");
-  Draw++;
-   }
-
-else if(computer==1)
-    {
-    printf("Human Wins...\n");
-    HumanScore++;
-    }
-}
-else if(human==3)
-{
-if(computer==3)
-  {
-  printf("Draw...\n");
-  Draw++;
-  }
-
-else if(computer==2)
-{
-    printf("Human wins wins...\n");
-    HumanScore++;
-}
-
-else if(computer==1){
-    printf("Computer wins...\n");
-     ComputersScore++;}
-}
-
-else {
-    printf("You have only 3 options please select an exist option...");
-}
-
-i++;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-printf("Your score %d %d Computers score\n",HumanScore,ComputersScore);
-printf("The Draw results=%d",Draw);
+     for(int i = 0 ; A[i] != '\0' ; i++)
+     {
+        if (A[i] == 'a')
+        {
+            sayac++ ;
+        }
+        else if(A[i] == ' ' )
+        {
+            kelime++ ;
+            printf("%d. kelime %d tane a harfi var \n ",kelime , sayac );
+            sayac = 0;
+        }
+     }
+      kelime++ ;
+      printf("%d. kelime %d tane a harfi var \n ",kelime , sayac);
     return 0;
 }
