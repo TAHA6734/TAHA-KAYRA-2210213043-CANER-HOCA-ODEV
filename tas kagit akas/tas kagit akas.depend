@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1678271826 source:c:\users\ttaha\onedrive\desktop\c\tas kagit akas\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
