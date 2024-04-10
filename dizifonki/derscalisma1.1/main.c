@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int main()
+{
+
+
+int *alan1 = malloc(10 * sizeof(int) ) ;
+
+int *alan2 = calloc(10 , sizeof(int) ) ;
+
+for(int i = 0 ; i < 10 ; i++)
+{
+    printf("alan1[%d] = %d  ve alan2[%d] = %d \n "  , i , alan1[i] , i  , alan2[i]);
+}
+
+
+printf("\n") ;   printf("\n") ;   printf("\n") ;
+  alan1 = realloc(alan1, 5* sizeof(int )) ;
+  for( int i = 0 ; i < 5 ; i++)
+  {
+      printf("alan[%d]=%d\n",i,alan1[i]);
+  }
+
+free(alan1);
+
+free(alan2);
+    return 0;
+}
